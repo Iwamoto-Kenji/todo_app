@@ -8,4 +8,8 @@ import (
 
 func main() {
 	fmt.Println(models.Db)
+	u, _ := models.GetUser(1)
+	u.DeleteUser()
+
+	fmt.Println(u)
 }
