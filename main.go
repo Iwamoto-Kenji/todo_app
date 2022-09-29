@@ -8,6 +8,11 @@ import (
 
 func main() {
 	fmt.Println(models.Db)
-	t, _ := models.GetTodo(1)
-	fmt.Println(t)
+	user, _ := models.GetUser(1)
+	user.CreateTodo("testTodo2")
+
+	todos, _ := models.GetTodos()
+	for _,v := range todos {
+		fmt.Println(v)
+	}
 }
