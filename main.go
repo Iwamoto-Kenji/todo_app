@@ -8,10 +8,7 @@ import (
 
 func main() {
 	fmt.Println(models.Db)
-	user, _ := models.GetUser(1)
-
-	todos, _ := user.GetTodosByUser()
-	for _,v := range todos {
-		fmt.Println(v)
-	}
+	t, _ := models.GetTodo(1)
+	t.Content = "Update Todo"
+	t.UpdateTodo()
 }
