@@ -9,9 +9,8 @@ import (
 func main() {
 	fmt.Println(models.Db)
 	user, _ := models.GetUser(1)
-	user.CreateTodo("testTodo2")
 
-	todos, _ := models.GetTodos()
+	todos, _ := user.GetTodosByUser()
 	for _,v := range todos {
 		fmt.Println(v)
 	}
