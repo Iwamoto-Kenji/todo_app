@@ -8,7 +8,6 @@ import (
 
 func main() {
 	fmt.Println(models.Db)
-	u, _ := models.GetUser(1)
-
-	fmt.Println(u)
+	t, _ := models.GetTodo(1)
+	t.DeleteTodo()
 }
